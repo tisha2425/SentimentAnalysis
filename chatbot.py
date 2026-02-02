@@ -9,7 +9,8 @@ OPEN_AI_API_KEY = os.getenv("OPEN_AI_API_KEY")
 
 # SAFETY CHECK
 if not OPEN_AI_API_KEY:
-    raise ValueError("open_ai_api_key is not set in environment variables")
+    raise ValueError("OPEN_AI_API_KEY is not set in environment variables")
+
 
 # PASS IT EXPLICITLY (IMPORTANT)
 client = OpenAI(api_key=OPEN_AI_API_KEY)
@@ -60,3 +61,4 @@ def generate_ai_response1(user_input, sentiment=None, category=None, sub_categor
             "I’m having a bit of trouble responding right now. "
             "Let me connect you with a human team member for help 🙂"
         )
+
