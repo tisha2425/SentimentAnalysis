@@ -5,9 +5,11 @@ from email.mime.multipart import MIMEMultipart
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
+import os
 
-SENDER_EMAIL = "agrawaltisha42@gmail.com"      # your Gmail
-APP_PASSWORD = "boji vnoe avyu kpuk"   # Gmail App Password
+SENDER_EMAIL = os.getenv("SMTP_EMAIL")
+APP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
 
 def send_email(to_email, subject, body):
     try:
@@ -28,3 +30,4 @@ def send_email(to_email, subject, body):
     except Exception as e:
         print("Email error:", e)
         return False
+
