@@ -6,6 +6,7 @@ Food Review Analyzer is a web application that helps analyze food product review
 It uses Machine Learning to predict sentiment and AI to generate smart responses.
 
 The app is built using **Streamlit**, so it runs directly in the browser.
+https://sentimentanalysis-3ihmwrmvmhgrqpmbnykruw.streamlit.app/
 
 ---
 
