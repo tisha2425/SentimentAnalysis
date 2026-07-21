@@ -1,16 +1,14 @@
 import streamlit as st
 from groq import Groq
 
-client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"]
-)
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 def chatbot_response(user_question):
 
     prompt = f"""
 You are a helpful food product assistant.
 
-Answer politely and briefly.
+Answer the user's question politely.
 
 User Question:
 {user_question}
@@ -24,9 +22,7 @@ User Question:
                     "role": "user",
                     "content": prompt
                 }
-            ],
-            temperature=0.7,
-            max_tokens=300
+            ]
         )
 
         return response.choices[0].message.content
