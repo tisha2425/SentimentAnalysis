@@ -5,3 +5,4 @@ scikit-learn
 python-dotenv
 openpyxl
 openai
+groq>=0.30.0
