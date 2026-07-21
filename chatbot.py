@@ -3,6 +3,8 @@ from groq import Groq
 
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
+from chatbot import generate_ai_response1
+
 def chatbot_response(user_question):
 
     prompt = f"""
